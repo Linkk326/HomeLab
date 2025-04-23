@@ -1,42 +1,80 @@
-# HomeLab
-This is a documented exploration of my HomeLab and Cybersecurity projects.
+# 🏠 HomeLab Overview
 
-# High Level Setup
+Welcome to my HomeLab repository! This repo documents the architecture, projects, and practical skills I've built by designing and maintaining a functional network and virtualization environment. My setup allows me to explore areas like:
 
-## Overview
-This is a listing of equipment I have used to set up my home network and why I chose the equipment.
+- Cybersecurity
+- Networking
+- Virtualization
+- Systems administration
+- Home automation and monitoring
 
-## Objectives
-- Set up home network and lab environment that will allow me to explore different networking and cybersecurity tools.
-- 
+---
 
-## Tools & Technologies
-- Windows Server 2019
-- pfSense (Virtualized)
-- Proxmox
-- TrueNAS Scale
-- Kali and Ubuntu Linux
-- LXC and Docker Containers
-- Cloudflare Zero Trust Tunnels
-- piHole, piVPN
-- Wireshark
+## 🧱 Infrastructure Overview
 
-## Network Diagram
-![Network Diagram](network-diagram.png)
+### 🔌 ISP & Router
+- **Internet Provider:** COX
+- **Firewall/Router:** `pfSense` running as a VM
+- **Hypervisor:** Proxmox VE
+- **Host Machine:** HP EliteDesk Mini
+  - **CPU:** Intel i7-8700
+  - **RAM:** 8 GB
+  - **Storage:** 500 GB M.2 SSD
 
-## Steps Taken
-1. Provisioned virtual machines
-2. Installed Active Directory Services
-3. Configured DNS, DHCP
-4. Created users, groups, OUs
-5. Applied Group Policy Objects (GPOs)
+> pfSense VM is the central routing and firewall solution, running on the bare metal Proxmox host.
 
-## Challenges & Lessons Learned
-Talk briefly about any issues and how you solved them.
+---
 
-## Screenshots
-*(Optional, but adds credibility)*
+### 🔀 Network Topology
 
-## References / Resources
-- [Microsoft AD Docs](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/)
-- Any guides or courses you followed
+- **LAN Backbone:** Cisco Meraki 8-Port PoE Switch
+- **Access Points:** TP-Link Deco Mesh System (configured as APs)
+- **Extra Connectivity:** Netgear 5-Port Unmanaged Switch
+
+---
+
+### 🖥️ Proxmox Cluster
+
+**Two-node Proxmox cluster hosting critical VMs and services.**
+
+#### Node 1 & Node 2:
+- **Model:** HP Z2 Mini G3 (x2)
+- **CPU:** Intel i7-8700
+- **RAM:** 16 GB each
+- **Cluster Features:** Local backups, resource pooling, redundancy (manual failover)
+
+---
+
+## 📡 Network Flow Diagram *(Visual Coming Soon)*
+
+
+> A full network diagram with IP ranges, VLANs, and virtual topology will be included in the `/Diagrams` folder.
+
+---
+
+## 🔧 Coming Soon: VM & Service Details
+
+Each major VM or service in the lab will be documented in its own folder with:
+- Config steps
+- Network configuration
+- Security posture
+- Screenshots and logs
+
+Stay tuned!
+
+---
+
+## 🧠 Goals of this HomeLab
+
+- Practice secure network segmentation and firewall rules
+- Deploy enterprise-grade services in a virtual environment
+- Document real-world sysadmin and networking tasks
+- Build a portfolio for cybersecurity and infrastructure roles
+
+---
+
+## 📜 License
+
+This repository is for personal and educational use. Diagrams, notes, and configurations are shared for reference purposes only.
+
+
